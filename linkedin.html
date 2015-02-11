@@ -17,7 +17,7 @@
 
   // 2. Runs when the viewer has authenticated
   function onLinkedInAuth() {
-    IN.API.Profile("me", "url=https://www.linkedin.com/in/jakobheuser").result(displayProfiles);
+    IN.API.Profile("me", "url=https://www.linkedin.com/in/jakobheuser").fields("firstName", "lastName", "industry").result(displayProfiles);
   }
 
   // 2. Runs when the Profile() API call returns successfully
@@ -25,7 +25,7 @@
 	var profilesDiv = document.getElementById("profiles"); 
 	var members = profiles.values;
 	for(var member in members) {
-    		profilesDiv.innerHTML += "<p id=\"" + members[member].id + "\">Hello " + members[member].firstName + " " + members[member].lastName + "</p>";
+    		profilesDiv.innerHTML += "<p id=\"" + members[member].id + "\">Hello " + members[member].firstName + " " + members[member].lastName + " works in the " + members[member].industry + " industry. </p>";
 	}
   }
 </script>
