@@ -22,10 +22,10 @@
 
   // 2. Runs when the Profile() API call returns successfully
   function displayProfiles(profiles) {
-	var profiles = document.getElementById("profiles"); 
+	var profilesDiv = document.getElementById("profiles"); 
 	var members = profiles.values;
 	for(var member in members) {
-    		profiles.innerHTML += "<p id=\"" + members[member].id + "\">Hello " + members[member].firstName + " " + members[member].lastName + "</p>";
+    		profilesDiv.innerHTML += "<p id=\"" + members[member].id + "\">Hello " + members[member].firstName + " " + members[member].lastName + "</p>";
 	}
   }
 </script>
