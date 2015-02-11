@@ -25,7 +25,7 @@
 	var profiles = document.getElementById("profiles"); 
 	var members = profiles.values;
 	for(var member in members) {
-    		profiles.innerHTML += "<p id=\"" + member.id + "\">Hello " +  member.firstName + " " + member.lastName + "</p>";
+    		profiles.innerHTML += "<p id=\"" + members[member].id + "\">Hello " + members[member].firstName + " " + members[member].lastName + "</p>";
 	}
   }
 </script>
