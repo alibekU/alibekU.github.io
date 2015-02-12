@@ -19,7 +19,7 @@
   function onLinkedInAuth() {
   	IN.API.Profile("me","url=https://www.linkedin.com/in/jakobheuser")
     	.fields("firstName", "lastName", "industry")
-    	.result(displayProfiles);
+    	.result(displayProfiles)
 	.error(displayProfilesErrors);
   }
 
