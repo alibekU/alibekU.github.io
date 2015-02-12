@@ -17,7 +17,7 @@
 
   // 2. Runs when the viewer has authenticated
   function onLinkedInAuth() {
-  	IN.API.Profile("me","url=https://www.linkedin.com/in/jakobheuser")
+  	IN.API.Profile("me","url=https://www.linkedin.com/pub/yermek-issatayev/61/927/800")
     	.fields("firstName", "lastName", "industry")
     	.result(displayProfiles)
 	.error(displayProfilesErrors);
