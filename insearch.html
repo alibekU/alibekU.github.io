@@ -30,7 +30,7 @@ function PeopleSearch(keywords) {
      // Ask for 4 fields to be returned: first name, last name, distance, and Profile URL
      // Limit results to 10 and sort by distance
      // On success, call displayPeopleSearch(); On failure, do nothing.
-     var keywords = document.getElementById('keywords').innerText; 
+     var keywords = document.getElementById('keywords').value; 
      IN.API.PeopleSearch()
          .fields("firstName", "lastName", "distance", "siteStandardProfileRequest")
          .params({"keywords": keywords, "count": 10, "sort": "distance"})
