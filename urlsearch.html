@@ -32,7 +32,7 @@ function onLinkedInAuth() {
 
 // Requests info for the url from the form
 function getInfo(url) {
-	var url = document.getElementById('url').innerText;
+	var url = document.getElementById('url').value;
   	IN.API.Profile("url="+url)
     	.fields("firstName", "lastName", "industry")
     	.result(displayInfo)
